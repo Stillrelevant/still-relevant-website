@@ -69,8 +69,8 @@ export default function Footer() {
             <li><Link href="/speaking/" className="text-[0.92rem] text-slate hover:text-teal">Book a talk</Link></li>
             <li><Link href="/guide/" className="text-[0.92rem] text-slate hover:text-teal">Free guide</Link></li>
             <li>
-              <a href={`mailto:${site.email}`} className="text-[0.92rem] text-slate hover:text-teal">
-                {site.email}
+              <a href={site.phoneHref} className="text-[0.92rem] font-semibold text-teal hover:underline">
+                {site.phone}
               </a>
             </li>
           </ul>

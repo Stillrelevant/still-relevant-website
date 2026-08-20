@@ -17,8 +17,8 @@ const courses = [
   {
     name: 'Where Do I Fit In?',
     level: 'Never used it, or tried once',
-    length: '90 minutes, online',
-    price: 'From £35',
+    length: '90 minutes',
+    price: '£45',
     summary:
       'The one to come to first. What this actually is, what it is genuinely useful for, and where it could fit into your life. Nothing technical, nothing assumed, and no laptop skills required.',
     points: [
@@ -30,8 +30,8 @@ const courses = [
   {
     name: 'Asking Better Questions',
     level: 'Tried it, unsure you are doing it right',
-    length: '2 hours, online',
-    price: 'From £45',
+    length: '2 hours',
+    price: '£65',
     summary:
       'If you have typed something in, got something bland back and quietly given up, this is the fix. How to ask so you get answers worth having, and how to keep the conversation going when the first reply misses.',
     points: [
@@ -43,8 +43,8 @@ const courses = [
   {
     name: 'AI for Everyday Life',
     level: 'Anyone, no work context needed',
-    length: 'Half day, online',
-    price: 'From £95',
+    length: '4 hours',
+    price: '£110',
     summary:
       'Nothing to do with jobs. Family, travel, letters, food, gardening, hobbies, learning and keeping on top of things. For people who want this for their actual life rather than their CV.',
     points: [
@@ -54,10 +54,10 @@ const courses = [
     ],
   },
   {
-    name: 'Better Prepared at Work',
+    name: 'Better Prepared for Work',
     level: 'Working professionals and managers',
-    length: 'Half day, online',
-    price: 'From £110',
+    length: '4 hours',
+    price: '£150',
     summary:
       'Built for people whose employer may not allow AI at work at all. Everything here happens on your own time and your own device, and none of it needs a single piece of company information.',
     points: [
@@ -69,8 +69,8 @@ const courses = [
   {
     name: 'What’s Next',
     level: 'Fifties, sixties, seventies and beyond',
-    length: 'Half day, online',
-    price: 'From £95',
+    length: '4 hours',
+    price: '£110',
     summary:
       'For the project you have been meaning to start. A book, a small business, a community group, a bit of extra income, or something you set aside years ago and have never quite let go of.',
     points: [
@@ -82,8 +82,8 @@ const courses = [
   {
     name: 'Careful and Confident',
     level: 'Anyone who wants the rules clear',
-    length: '90 minutes, online',
-    price: 'From £40',
+    length: '90 minutes',
+    price: '£50',
     summary:
       'Where the real risks sit and how to stay well clear of them. What is safe to type in, what is not, how to spot a confident wrong answer, and how to keep your own judgement in charge.',
     points: [
@@ -93,6 +93,20 @@ const courses = [
     ],
   },
 ];
+
+const oneToOne = {
+  name: 'One-to-one consultation',
+  length: '2 hours 30 minutes',
+  price: '£250',
+  summary:
+    'Just you and me, working on your situation rather than a room’s. We go through what you actually do, find where this genuinely helps, and set the whole thing up with you while you watch.',
+  points: [
+    'Built entirely around your life, work or project',
+    'Everything set up and working before we finish',
+    'A written summary and your own set of questions to keep',
+    'Online, or in person by arrangement',
+  ],
+};
 
 const faqs = [
   {
@@ -153,7 +167,18 @@ export default function Learn() {
       />
 
       <section className="py-16">
-        <div className="wrap grid gap-6 md:grid-cols-2">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Group sessions</p>
+            <h2 className="mt-3 text-[2rem] leading-tight">Learn alongside other people</h2>
+            <p className="mt-4 lede">
+              Every price below is for a place in a small group class. Numbers are capped so you
+              still get proper attention, and everyone in the room is at roughly the same stage.
+            </p>
+          </div>
+        </div>
+
+        <div className="wrap mt-10 grid gap-6 md:grid-cols-2">
           {courses.map((c) => (
             <article key={c.name} className="card flex flex-col">
               <div className="flex flex-wrap gap-2">
@@ -175,13 +200,77 @@ export default function Learn() {
                 ))}
               </ul>
               <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-teal-100 pt-5">
-                <span className="font-heading text-[1.2rem] font-bold text-teal-700">{c.price}</span>
+                <span>
+                  <span className="font-heading text-[1.35rem] font-bold text-teal-700">
+                    {c.price}
+                  </span>
+                  <span className="ml-2 text-[0.8rem] text-slate">per place, group class</span>
+                </span>
                 <Link href="/contact/" className="btn-primary !min-h-[46px] !px-6 !py-2.5">
                   Register interest
                 </Link>
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* One to one */}
+      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <p className="eyebrow">One to one</p>
+            <h2 className="mt-3 text-[2rem] leading-tight">Or just you and me</h2>
+            <p className="mt-4 lede">
+              If you would rather not learn in a group, or your situation is specific enough that a
+              class would not cover it, this is the option.
+            </p>
+          </div>
+
+          <article className="card mt-9 bg-white lg:flex lg:items-start lg:gap-10">
+            <div className="lg:flex-1">
+              <div className="flex flex-wrap gap-2">
+                <span className="rounded-full bg-teal-50 px-3.5 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.12em] text-teal-800">
+                  Private session
+                </span>
+                <span className="rounded-full bg-gold-100 px-3.5 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.12em] text-teal-900">
+                  {oneToOne.length}
+                </span>
+              </div>
+              <h3 className="mt-4 text-[1.6rem]">{oneToOne.name}</h3>
+              <p className="mt-3 text-[0.98rem] leading-relaxed text-slate">{oneToOne.summary}</p>
+              <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+                {oneToOne.points.map((p) => (
+                  <li key={p} className="flex gap-3 text-[0.93rem] leading-relaxed text-ink">
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-7 shrink-0 border-t border-teal-100 pt-6 lg:mt-0 lg:w-56 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+              <span className="block font-heading text-[2rem] font-bold text-teal-700">
+                {oneToOne.price}
+              </span>
+              <span className="mt-1 block text-[0.85rem] text-slate">
+                for the full session, one person
+              </span>
+              <Link href="/contact/" className="btn-primary mt-5 w-full">
+                Book a slot
+              </Link>
+            </div>
+          </article>
+
+          <p className="mt-8 rounded-2xl border-2 border-teal-100 bg-white px-6 py-5 text-[0.95rem] leading-relaxed text-slate">
+            <span className="font-semibold text-teal-800">Running something for a group of your own?</span>{' '}
+            Workplaces, membership bodies, charities, churches and community groups are priced
+            separately depending on numbers and how much tailoring is involved.{' '}
+            <Link href="/organisations/" className="link-teal">
+              Ask for a quote
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

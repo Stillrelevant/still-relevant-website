@@ -15,7 +15,7 @@ const products = [
   {
     name: 'Where Do I Start: the workbook',
     type: 'Digital download',
-    price: 'From £15',
+    price: 'Price at launch',
     body: 'A guided workbook that walks you through your own life, not somebody else’s, and helps you find the handful of things AI could genuinely help with. Then shows you how to make a start on each.',
     for: 'Anyone who prefers working through it alone',
     status: 'Waiting list open',
@@ -23,7 +23,7 @@ const products = [
   {
     name: 'A Hundred Better Questions',
     type: 'Digital download',
-    price: 'From £19',
+    price: 'Price at launch',
     body: 'A hundred ready-made questions that actually get useful answers, sorted by what you are trying to do. Letters, planning, learning, meetings, writing, difficult conversations. Copy, adjust, use.',
     for: 'People who know what they want but not how to ask',
     status: 'Waiting list open',
@@ -31,7 +31,7 @@ const products = [
   {
     name: 'Where Do I Fit In: the self-paced course',
     type: 'Short course',
-    price: 'From £39',
+    price: 'Price at launch',
     body: 'The beginner session, recorded and broken into short lessons you can work through in a fortnight of coffee breaks. Includes the exercises, the questions and a plain-English glossary.',
     for: 'Anyone starting from scratch',
     status: 'Waiting list open',
@@ -39,7 +39,7 @@ const products = [
   {
     name: 'The Group Pack',
     type: 'For organisations and groups',
-    price: 'From £149',
+    price: 'Price at launch',
     body: 'For running a session yourself with a team, a church group, a community organisation or a U3A. Slides, a facilitator guide, handouts, and a simple one-page policy template.',
     for: 'Anyone leading a group through this',
     status: 'Waiting list open',
@@ -91,7 +91,7 @@ export default function Shop() {
                 <span className="font-semibold text-teal-800">Written for:</span> {p.for}
               </p>
               <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-teal-100 pt-5">
-                <span className="font-heading text-[1.2rem] font-bold text-teal-700">{p.price}</span>
+                <span className="text-[0.9rem] font-semibold uppercase tracking-wider text-slate">{p.price}</span>
                 <Link href="/contact/" className="btn-primary !min-h-[46px] !px-6 !py-2.5">
                   Join the waiting list
                 </Link>
@@ -103,8 +103,8 @@ export default function Shop() {
         <div className="wrap mt-10">
           <p className="rounded-2xl border-2 border-teal-100 bg-teal-50/60 px-6 py-5 text-[0.95rem] leading-relaxed text-slate">
             These are released one at a time, so each is properly finished before the next starts.
-            Join the list for whichever you want and you will hear on the day it opens, with nothing
-            in between.
+            Prices are set when each one opens. Join the list for whichever you want and you will
+            hear on the day, with nothing in between.
           </p>
         </div>
       </section>

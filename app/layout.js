@@ -1,9 +1,8 @@
-import '@fontsource/baloo-2/latin-600.css';
-import '@fontsource/baloo-2/latin-700.css';
-import '@fontsource/baloo-2/latin-800.css';
-import '@fontsource/poppins/latin-400.css';
-import '@fontsource/poppins/latin-500.css';
-import '@fontsource/poppins/latin-600.css';
+import '@fontsource/source-serif-4/latin-600.css';
+import '@fontsource/source-serif-4/latin-700.css';
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -44,7 +43,7 @@ const organisation = {
   '@id': `${site.url}/#organization`,
   name: site.name,
   url: site.url,
-  email: site.email,
+  telephone: site.phone,
   description: site.description,
   founder: { '@id': `${site.url}/#founder` },
 };

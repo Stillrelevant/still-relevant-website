@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: 'What does it cost?',
-    a: 'It depends on the number of sessions, the number of people and how much tailoring is involved. Send the shape of what you need and you will get a straight answer rather than a discovery process.',
+    a: 'Group and organisation work is quoted rather than listed, because it depends on the number of sessions, the number of people and how much tailoring is involved. Send the shape of what you need and you will get a straight figure rather than a discovery process.',
   },
 ];
 
@@ -115,9 +115,12 @@ export default function Organisations() {
             with the technology instead of the people. These start with what your teams actually do,
             in language everybody can follow, and are built so the confidence lasts.
           </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <p className="mt-6 inline-block rounded-full bg-teal-900/60 px-5 py-2 text-[0.9rem] font-semibold text-white">
+            Priced on request, based on numbers and tailoring
+          </p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href="/contact/" className="btn-gold">
-              Start a conversation
+              Ask for a quote
             </Link>
             <Link href="#programmes" className="btn-onteal">
               See the programmes

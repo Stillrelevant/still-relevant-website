@@ -107,7 +107,7 @@ export default function ContactForm() {
 
       {status === 'error' && (
         <p role="alert" className="mt-5 rounded-xl bg-red-50 px-4 py-3 text-[0.9rem] text-red-800">
-          Something went wrong sending that. Please email {site.email} instead and it will get
+          Something went wrong sending that. Please call {site.phone} instead and it will get
           picked up.
         </p>
       )}

@@ -27,8 +27,8 @@ module.exports = {
         slate: '#41535b',
       },
       fontFamily: {
-        heading: ['"Baloo 2"', 'system-ui', 'sans-serif'],
-        body: ['Poppins', 'system-ui', 'sans-serif'],
+        heading: ['"Source Serif 4"', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
       maxWidth: { content: '1160px' },
     },

@@ -25,12 +25,13 @@ export default function Contact() {
 
           <aside className="space-y-6">
             <div className="rounded-3xl bg-teal-50/70 p-8">
-              <h2 className="text-[1.3rem]">Prefer email?</h2>
+              <h2 className="text-[1.3rem]">Prefer to talk?</h2>
               <p className="mt-3 text-[0.95rem] leading-relaxed text-slate">
-                Write directly and include a rough date if you have one in mind.
+                Call or send a message. If it goes to voicemail, leave your name and what it is
+                about and you will get a call back.
               </p>
-              <a href={`mailto:${site.email}`} className="link-teal mt-4 inline-block">
-                {site.email}
+              <a href={site.phoneHref} className="link-teal mt-4 inline-block text-[1.1rem]">
+                {site.phone}
               </a>
             </div>
 

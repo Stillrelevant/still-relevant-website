@@ -3,7 +3,7 @@ import Explorer from '@/components/Explorer';
 import ArticleCard from '@/components/ArticleCard';
 import LeadForm from '@/components/LeadForm';
 import LeadCapture from '@/components/LeadCapture';
-import BrandPanel from '@/components/BrandPanel';
+import PhotoPanel from '@/components/PhotoPanel';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import { getArticles } from '@/lib/articles';
@@ -111,11 +111,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:pl-4">
-            <BrandPanel
-              label="You don’t need to become a tech person."
-              caption="You just need to know what’s useful to you."
-              className="min-h-[380px]"
+          <div className="lg:pl-6">
+            <PhotoPanel
+              src="/images/temi-relaxed.jpg"
+              alt="Temi Olajide, AI educator and strategy consultant"
+              caption={{ name: site.founder, role: 'AI Educator | Strategy Consultant' }}
+              priority
             />
           </div>
         </div>
@@ -242,11 +243,10 @@ export default function Home() {
       {/* 6. Founder */}
       <section className="py-20">
         <div className="wrap grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <BrandPanel
-            tone="gold"
-            label={site.founder}
-            caption="AI Educator and Strategy Consultant"
-            className="min-h-[340px]"
+          <PhotoPanel
+            src="/images/temi-formal.jpg"
+            alt="Temi Olajide"
+            accent="gold"
           />
           <div>
             <p className="eyebrow">Who is behind this</p>

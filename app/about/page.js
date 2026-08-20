@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PageHero from '@/components/PageHero';
 import CTABand from '@/components/CTABand';
-import BrandPanel from '@/components/BrandPanel';
+import PhotoPanel from '@/components/PhotoPanel';
 import { site } from '@/lib/site';
 
 export const metadata = {
@@ -103,11 +103,11 @@ export default function About() {
           </div>
 
           <aside className="space-y-6 lg:pt-2">
-            <BrandPanel
-              tone="gold"
-              label={site.founder}
-              caption="AI Educator and Strategy Consultant"
-              className="min-h-[300px]"
+            <PhotoPanel
+              src="/images/temi-formal.jpg"
+              alt="Temi Olajide"
+              accent="gold"
+              caption={{ name: site.founder, role: 'AI Educator | Strategy Consultant' }}
             />
             <div className="rounded-3xl border-2 border-teal-100 bg-teal-50/50 p-8">
               <p className="eyebrow">In short</p>

@@ -1,6 +1,6 @@
 import PageHero from '@/components/PageHero';
 import CTABand from '@/components/CTABand';
-import BrandPanel from '@/components/BrandPanel';
+import PhotoPanel from '@/components/PhotoPanel';
 import Schema from '@/components/Schema';
 import { site } from '@/lib/site';
 
@@ -94,10 +94,10 @@ export default function Speaking() {
               ))}
             </div>
           </div>
-          <BrandPanel
-            label="Book a talk"
-            caption="Send the date, the audience and what you want them to leave with."
-            className="min-h-[320px]"
+          <PhotoPanel
+            src="/images/temi-print.jpg"
+            alt="Temi Olajide, speaker"
+            caption={{ name: site.founder, role: 'Available for events across the UK' }}
           />
         </div>
       </section>

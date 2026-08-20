@@ -50,7 +50,7 @@ export default function LeadForm({
     } catch {
       setStatus('error');
       setError(
-        `Something went wrong sending that. Please email ${site.email} instead and I will pick it up.`
+        `Something went wrong sending that. Please call ${site.phone} instead and I will pick it up.`
       );
     }
   }
