@@ -1,7 +1,7 @@
 # Still Relevant
 
 Static website for Still Relevant. Next.js (App Router) with a static export, Tailwind CSS,
-and self-hosted Baloo 2 + Poppins. No server, no database, nothing to pay monthly beyond a
+and self-hosted Source Serif 4 + Inter. No server, no database, nothing to pay monthly beyond a
 domain name.
 
 ## Run it
@@ -31,8 +31,8 @@ states, but nothing is sent anywhere until you set an endpoint. Open `lib/site.j
 - MailerLite: use the embedded form action URL from your signup form.
 - Google Forms: use the `formResponse` URL and rename the field `name` attributes.
 
-**2. Details.** In `lib/site.js`: real email address, real domain in `url`, and the social
-links (currently `#`).
+**2. Details.** In `lib/site.js`: `phone` and `phoneHref` are set, the social links are live.
+Still to change: the real domain in `url`. There is deliberately no email address on the site.
 
 **3. Prices and sessions.** Session names and prices live in `app/learn/page.js`. Products in
 `app/shop/page.js`. Organisation programmes in `app/organisations/page.js`. Talks in
@@ -83,14 +83,15 @@ Nothing on this site invents social proof, client names or statistics.
 
 ## Photographs
 
-Where a photo will eventually go there is a branded panel (`components/BrandPanel.jsx`) rather
-than an empty placeholder, so the site looks deliberate until real images replace them. Swap
-them for `next/image` when you have photography.
+Real photographs live in `public/images/` and are shown through `components/PhotoPanel.jsx`,
+which frames them in a white card with a teal or gold shape behind. They are studio shots on a
+white background, so they are used as-is rather than cut out. Cutting the background out makes
+white clothing go transparent.
 
 ## Brand rules baked in
 
 - Teal `#0d5c6b` primary, gold `#f5c842` accent, white background
-- Baloo 2 for headings, Poppins for body, both self-hosted, so no Google Fonts request and
+- Source Serif 4 for headings, Inter for body, both self-hosted, so no Google Fonts request and
   nothing extra to declare in the privacy policy
 - **Gold is never text on white.** It is a block fill with dark text on top, or text on teal.
   Teal does all the interactive work: links, buttons, focus rings.
@@ -106,3 +107,14 @@ brand social image (`public/og.svg`). Structured data for Organization, Person, 
 Article, BreadcrumbList, FAQPage, Course, Product and Service. Auto-generated `sitemap.xml`
 and `robots.txt`. Breadcrumbs on every inner page. Internal linking between articles, topics
 and the commercial pages.
+
+
+## Mobile
+
+Type scale steps down below 640px (17px base, smaller headings, tighter section padding). The
+navigation collapses to a full-screen menu below 1280px.
+
+The mobile menu is rendered outside `<header>` on purpose. Any `backdrop-filter`, `transform` or
+`filter` on an ancestor makes that ancestor the containing block for `position: fixed` children,
+which traps a full-screen overlay inside the header bar on real devices. If you ever move the menu
+back inside the header, it will silently stop working on phones.

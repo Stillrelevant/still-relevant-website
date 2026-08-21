@@ -114,11 +114,11 @@ export default function Start() {
         return (
           <section
             key={g.world}
-            className={i % 2 === 1 ? 'border-y border-teal-100 bg-teal-50/50 py-16' : 'py-16'}
+            className={i % 2 === 1 ? 'border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16' : 'py-16'}
           >
             <div className="wrap">
               <p className="eyebrow">{world.name}</p>
-              <h2 className="mt-3 text-[1.9rem] leading-tight sm:text-[2.2rem]">{g.heading}</h2>
+              <h2 className="mt-3 text-[1.5rem] leading-tight sm:text-[2.2rem]">{g.heading}</h2>
               <ul className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                 {g.items.map((item) => (
                   <li
@@ -141,7 +141,7 @@ export default function Start() {
         );
       })}
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-6 md:grid-cols-3">
           {[
             {

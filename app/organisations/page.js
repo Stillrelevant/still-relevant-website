@@ -107,7 +107,7 @@ export default function Organisations() {
             <Breadcrumbs trail={[{ label: 'For Organisations', href: '/organisations/' }]} />
           </div>
           <p className="eyebrow-gold mt-8">For organisations and groups</p>
-          <h1 className="mt-3 max-w-3xl text-[2.3rem] leading-[1.1] text-white sm:text-[3rem]">
+          <h1 className="mt-3 max-w-3xl text-[1.8rem] leading-[1.15] text-white sm:text-[3rem]">
             Bringing your people along, not just your systems.
           </h1>
           <p className="mt-5 max-w-2xl text-[1.12rem] leading-[1.65] text-teal-100">
@@ -129,11 +129,11 @@ export default function Organisations() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="eyebrow">The usual situation</p>
-            <h2 className="mt-3 text-[1.9rem] leading-tight">Recognise any of these?</h2>
+            <h2 className="mt-3 text-[1.5rem] leading-tight sm:text-[1.9rem]">Recognise any of these?</h2>
             <ul className="mt-7 space-y-4">
               {problems.map((p) => (
                 <li key={p} className="flex gap-3.5 text-[0.98rem] leading-relaxed text-ink">
@@ -164,10 +164,10 @@ export default function Organisations() {
         </div>
       </section>
 
-      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
         <div className="wrap">
           <p className="eyebrow">How it runs</p>
-          <h2 className="mt-3 text-[1.9rem] leading-tight">Four steps, no mystery</h2>
+          <h2 className="mt-3 text-[1.5rem] leading-tight sm:text-[1.9rem]">Four steps, no mystery</h2>
           <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               ['A short call', 'Thirty minutes on who your people are and where the hesitation is. No sales process.'],

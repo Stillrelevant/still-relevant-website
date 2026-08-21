@@ -10,7 +10,7 @@ export default function LeadCapture({
   const gold = variant === 'gold';
 
   return (
-    <section className="py-16" id="get-the-guide">
+    <section className="py-12 sm:py-16" id="get-the-guide">
       <div className="wrap">
         <div
           className={`overflow-hidden rounded-3xl px-6 py-12 sm:px-12 sm:py-14 ${
@@ -21,7 +21,7 @@ export default function LeadCapture({
             <div>
               <p className={gold ? 'eyebrow !text-teal-900' : 'eyebrow-gold'}>{eyebrow}</p>
               <h2
-                className={`mt-3 text-[2rem] leading-tight sm:text-[2.4rem] ${
+                className={`mt-3 text-[1.55rem] leading-tight sm:text-[2.4rem] ${
                   gold ? 'text-teal-900' : 'text-white'
                 }`}
               >

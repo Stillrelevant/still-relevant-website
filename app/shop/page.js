@@ -73,7 +73,7 @@ export default function Shop() {
         lede="Written the way I teach: short, specific, and aimed at getting one real thing done. Nothing here needs you to be technical and nothing runs on a monthly subscription."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-6 md:grid-cols-2">
           {products.map((p) => (
             <article key={p.name} className="card flex flex-col">
@@ -85,7 +85,7 @@ export default function Shop() {
                   {p.status}
                 </span>
               </div>
-              <h2 className="mt-4 text-[1.4rem]">{p.name}</h2>
+              <h2 className="mt-4 text-[1.25rem] sm:text-[1.4rem]">{p.name}</h2>
               <p className="mt-3 flex-1 text-[0.96rem] leading-relaxed text-slate">{p.body}</p>
               <p className="mt-4 text-[0.88rem] text-slate">
                 <span className="font-semibold text-teal-800">Written for:</span> {p.for}

@@ -52,7 +52,7 @@ export default function ContactForm() {
   if (status === 'done') {
     return (
       <div role="status" className="card">
-        <h2 className="text-[1.5rem]">Thank you, that has come through.</h2>
+        <h2 className="text-[1.3rem] sm:text-[1.5rem]">Thank you, that has come through.</h2>
         <p className="mt-3 text-[0.98rem] leading-relaxed text-slate">
           {site.formEndpoint
             ? 'You will get a reply within two working days. If it is urgent, email directly and put "urgent" in the subject line.'

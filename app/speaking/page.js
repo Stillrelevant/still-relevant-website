@@ -60,12 +60,12 @@ export default function Speaking() {
         lede="Conferences, professional bodies, membership organisations, schools and community groups. Clear language, real examples, and an audience that leaves feeling capable rather than warned."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-6 md:grid-cols-2">
           {talks.map((t) => (
             <article key={t.title} className="card flex flex-col">
               <p className="eyebrow">{t.sub}</p>
-              <h2 className="mt-3 text-[1.5rem]">{t.title}</h2>
+              <h2 className="mt-3 text-[1.3rem] sm:text-[1.5rem]">{t.title}</h2>
               <p className="mt-3 flex-1 text-[0.96rem] leading-relaxed text-slate">{t.body}</p>
               <p className="mt-5 border-t border-teal-100 pt-4 text-[0.85rem] text-slate">
                 <span className="font-semibold text-teal-800">Best for:</span> {t.audience}
@@ -75,11 +75,11 @@ export default function Speaking() {
         </div>
       </section>
 
-      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
         <div className="wrap grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="eyebrow">For organisers</p>
-            <h2 className="mt-3 text-[1.9rem] leading-tight">Everything you need, early</h2>
+            <h2 className="mt-3 text-[1.5rem] leading-tight sm:text-[1.9rem]">Everything you need, early</h2>
             <div className="mt-8 grid gap-7 sm:grid-cols-2">
               {[
                 ['Formats', 'Keynote, breakout, panel, fireside or a hands-on session. Happy to run a practical workshop alongside a talk on the same day.'],

@@ -16,7 +16,8 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-teal-100 bg-white/95 backdrop-blur">
+    <>
+      <header className="sticky top-0 z-40 border-b border-teal-100 bg-white">
       <div className="wrap flex h-[76px] items-center justify-between">
         <Link href="/" aria-label="Still Relevant, home">
           <Logo />
@@ -50,7 +51,13 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Full-screen mobile menu, designed rather than shrunk. */}
+      </header>
+
+      {/*
+        Rendered OUTSIDE <header> on purpose. A backdrop-filter or transform on an
+        ancestor makes it the containing block for position: fixed children, which
+        traps a full-screen overlay inside the 76px header bar on real devices.
+      */}
       {open && (
         <div className="fixed inset-0 z-50 flex flex-col bg-white xl:hidden">
           <div className="wrap flex h-[76px] shrink-0 items-center justify-between border-b border-teal-100">
@@ -97,6 +104,6 @@ export default function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }

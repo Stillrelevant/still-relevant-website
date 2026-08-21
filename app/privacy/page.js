@@ -18,7 +18,7 @@ export default function Privacy() {
         lede="Written to be read rather than to protect anybody. If something here is unclear, ask and it will be explained properly."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap prose-sr max-w-3xl">
           <h2>What is collected</h2>
           <p>

@@ -8,10 +8,20 @@
 }
 
 html {
-  /* 18px base, chosen deliberately for this audience. */
-  font-size: 18px;
+  /* 17px on small screens, 18px from tablet up. Chosen for this audience. */
+  font-size: 17px;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
+
+@media (min-width: 640px) {
+  html { font-size: 18px; }
+}
+
+/* Nothing may cause a sideways scroll on a phone. */
+html, body { overflow-x: hidden; }
+
+img, svg, video { max-width: 100%; height: auto; }
 
 body {
   @apply font-body text-ink bg-white antialiased;
@@ -56,13 +66,13 @@ h1, h2, h3, h4 {
 
   .card { @apply rounded-2xl border border-teal-100 bg-white p-7 shadow-[0_1px_2px_rgba(13,92,107,0.05)] transition-shadow hover:shadow-[0_8px_28px_rgba(13,92,107,0.12)]; }
 
-  .lede { @apply text-[1.12rem] leading-[1.65] text-slate; }
+  .lede { @apply text-[1.02rem] leading-[1.6] text-slate sm:text-[1.12rem] sm:leading-[1.65]; }
 
   .link-teal { @apply font-semibold text-teal underline-offset-4 hover:text-teal-800 hover:underline; }
 
-  .prose-sr { @apply text-[1.05rem] leading-[1.75] text-ink; }
-  .prose-sr h2 { @apply mt-11 mb-3 text-[1.6rem] leading-snug; }
-  .prose-sr h3 { @apply mt-8 mb-2 text-[1.25rem] leading-snug; }
+  .prose-sr { @apply text-[1rem] leading-[1.72] text-ink sm:text-[1.05rem] sm:leading-[1.75]; }
+  .prose-sr h2 { @apply mt-10 mb-3 text-[1.35rem] leading-snug sm:mt-11 sm:text-[1.6rem]; }
+  .prose-sr h3 { @apply mt-7 mb-2 text-[1.15rem] leading-snug sm:mt-8 sm:text-[1.25rem]; }
   .prose-sr p { @apply mb-5; }
   .prose-sr ul { @apply mb-5 list-disc space-y-2 pl-6; }
   .prose-sr ol { @apply mb-5 list-decimal space-y-2 pl-6; }

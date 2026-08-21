@@ -67,7 +67,7 @@ export default async function ArticlePage({ params }) {
                 {topic.name}
               </Link>
             )}
-            <h1 className="mt-3 text-[2.1rem] leading-[1.15] sm:text-[2.7rem]">{article.title}</h1>
+            <h1 className="mt-3 text-[1.7rem] leading-[1.22] sm:text-[2.7rem]">{article.title}</h1>
             <p className="mt-5 text-[0.9rem] text-slate">
               {formatDate(article.date)} &middot; {article.readingMinutes} minute read
             </p>
@@ -100,9 +100,9 @@ export default async function ArticlePage({ params }) {
         </div>
       </article>
 
-      <section className="border-t border-teal-100 py-14">
+      <section className="border-t border-teal-100 py-11 sm:py-14">
         <div className="wrap">
-          <h2 className="text-[1.7rem]">Read next</h2>
+          <h2 className="text-[1.4rem] sm:text-[1.7rem]">Read next</h2>
           <div className="mt-7 grid gap-6 md:grid-cols-3">
             {related.map((a) => (
               <ArticleCard key={a.slug} article={a} />

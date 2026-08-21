@@ -41,7 +41,7 @@ export default function Articles() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((a) => (
             <ArticleCard key={a.slug} article={a} />

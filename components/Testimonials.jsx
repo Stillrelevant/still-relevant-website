@@ -5,7 +5,7 @@ export default function Testimonials() {
   if (!site.testimonials || site.testimonials.length === 0) return null;
 
   return (
-    <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+    <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
       <div className="wrap">
         <p className="eyebrow">In their words</p>
         <div className="mt-8 grid gap-6 md:grid-cols-3">

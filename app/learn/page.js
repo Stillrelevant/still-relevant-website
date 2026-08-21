@@ -166,11 +166,11 @@ export default function Learn() {
         lede="Sessions are capped so you get proper attention, and pitched for people who have either never tried this or tried once and quietly given up. You leave having actually done something, not just watched."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap">
           <div className="max-w-2xl">
             <p className="eyebrow">Group sessions</p>
-            <h2 className="mt-3 text-[2rem] leading-tight">Learn alongside other people</h2>
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2rem]">Learn alongside other people</h2>
             <p className="mt-4 lede">
               Every price below is for a place in a small group class. Numbers are capped so you
               still get proper attention, and everyone in the room is at roughly the same stage.
@@ -189,7 +189,7 @@ export default function Learn() {
                   {c.length}
                 </span>
               </div>
-              <h2 className="mt-4 text-[1.45rem]">{c.name}</h2>
+              <h2 className="mt-4 text-[1.28rem] sm:text-[1.45rem]">{c.name}</h2>
               <p className="mt-3 text-[0.96rem] leading-relaxed text-slate">{c.summary}</p>
               <ul className="mt-5 space-y-2.5">
                 {c.points.map((p) => (
@@ -216,11 +216,11 @@ export default function Learn() {
       </section>
 
       {/* One to one */}
-      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
         <div className="wrap">
           <div className="max-w-2xl">
             <p className="eyebrow">One to one</p>
-            <h2 className="mt-3 text-[2rem] leading-tight">Or just you and me</h2>
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2rem]">Or just you and me</h2>
             <p className="mt-4 lede">
               If you would rather not learn in a group, or your situation is specific enough that a
               class would not cover it, this is the option.
@@ -237,7 +237,7 @@ export default function Learn() {
                   {oneToOne.length}
                 </span>
               </div>
-              <h3 className="mt-4 text-[1.6rem]">{oneToOne.name}</h3>
+              <h3 className="mt-4 text-[1.35rem] sm:text-[1.6rem]">{oneToOne.name}</h3>
               <p className="mt-3 text-[0.98rem] leading-relaxed text-slate">{oneToOne.summary}</p>
               <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
                 {oneToOne.points.map((p) => (
@@ -274,7 +274,7 @@ export default function Learn() {
         </div>
       </section>
 
-      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
         <div className="wrap grid gap-8 md:grid-cols-3">
           {[
             ['Small groups', 'Numbers are kept deliberately low. You are not going to be one of two hundred people in a webinar.'],

@@ -12,12 +12,12 @@ export default function FAQ({ items, title = 'Questions people actually ask' }) 
   };
 
   return (
-    <section className="border-t border-teal-100 py-16">
+    <section className="border-t border-teal-100 py-12 sm:py-16">
       <Schema data={schema} />
       <div className="wrap grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="eyebrow">FAQ</p>
-          <h2 className="mt-3 text-[2rem] leading-tight">{title}</h2>
+          <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2rem]">{title}</h2>
         </div>
         <div className="divide-y divide-teal-100 border-y border-teal-100">
           {items.map((f) => (

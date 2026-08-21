@@ -40,7 +40,7 @@ export default function About() {
         lede="You just need to understand what’s useful to you. That sentence is more or less the whole reason Still Relevant exists."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-14 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="prose-sr max-w-none">
             <p>
@@ -137,11 +137,11 @@ export default function About() {
         </div>
       </section>
 
-      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
         <div className="wrap">
           <div className="max-w-2xl">
             <p className="eyebrow">How I teach</p>
-            <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.4rem]">
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.4rem]">
               Four rules I do not break
             </h2>
           </div>

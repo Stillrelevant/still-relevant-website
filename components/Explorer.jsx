@@ -94,11 +94,11 @@ const groups = [
 
 export default function Explorer() {
   return (
-    <section className="border-y border-teal-100 bg-teal-50/50 py-16 sm:py-20" id="what-could-it-do">
+    <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16 sm:py-20" id="what-could-it-do">
       <div className="wrap">
         <div className="max-w-2xl">
           <p className="eyebrow">What could it actually do for me?</p>
-          <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.5rem]">
+          <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">
             The same things you already do. A lot less effort.
           </h2>
           <p className="mt-4 lede">

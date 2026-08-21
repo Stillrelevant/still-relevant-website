@@ -84,7 +84,7 @@ export default function Home() {
         <div className="wrap relative grid items-center gap-14 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
           <div>
             <p className="eyebrow">For adults 40 and beyond</p>
-            <h1 className="mt-4 text-[2.5rem] leading-[1.06] sm:text-[3.3rem] lg:text-[3.8rem]">
+            <h1 className="mt-4 text-[1.95rem] leading-[1.12] sm:text-[3.3rem] lg:text-[3.8rem]">
               AI is changing the world. Here&rsquo;s where you fit in.
             </h1>
             <p className="mt-6 max-w-xl lede">
@@ -123,11 +123,11 @@ export default function Home() {
       </section>
 
       {/* 2. Recognition, not fear */}
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="wrap grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="eyebrow">Where most people are</p>
-            <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.5rem]">
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">
               Most people aren&rsquo;t frightened of AI. They just can&rsquo;t see where they come
               into it.
             </h2>
@@ -162,11 +162,11 @@ export default function Home() {
       <Explorer />
 
       {/* 4. The three worlds */}
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="wrap">
           <div className="max-w-2xl">
             <p className="eyebrow">Three places it helps</p>
-            <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.5rem]">
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">
               More parts of your life than you might realise
             </h2>
             <p className="mt-4 lede">
@@ -191,11 +191,11 @@ export default function Home() {
       </section>
 
       {/* 5. The workplace objection, answered head on */}
-      <section className="border-y border-teal-100 bg-teal-50/50 py-20">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-14 sm:py-20">
         <div className="wrap grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
             <p className="eyebrow">The thing people say most often</p>
-            <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.4rem]">
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.4rem]">
               &ldquo;My workplace doesn&rsquo;t allow AI, so this isn&rsquo;t for me.&rdquo;
             </h2>
             <p className="mt-5 text-[1.05rem] leading-relaxed text-slate">
@@ -241,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* 6. Founder */}
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="wrap grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <PhotoPanel
             src="/images/temi-formal.jpg"
@@ -250,7 +250,7 @@ export default function Home() {
           />
           <div>
             <p className="eyebrow">Who is behind this</p>
-            <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.4rem]">
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.4rem]">
               I teach the way I wish someone had explained it to me.
             </h2>
             <div className="mt-5 space-y-4 text-[1rem] leading-relaxed text-slate">
@@ -281,11 +281,11 @@ export default function Home() {
       </section>
 
       {/* 7. Two featured offers */}
-      <section className="border-t border-teal-100 py-20">
+      <section className="border-t border-teal-100 py-11 sm:py-14 sm:py-20">
         <div className="wrap">
           <div className="max-w-2xl">
             <p className="eyebrow">Where most people start</p>
-            <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.5rem]">Two good first steps</h2>
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">Two good first steps</h2>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {offers.map((o) => (
@@ -293,7 +293,7 @@ export default function Home() {
                 <span className="w-fit rounded-full bg-gold px-4 py-1.5 text-[0.72rem] font-bold uppercase tracking-[0.12em] text-teal-900">
                   {o.tag}
                 </span>
-                <h3 className="mt-4 text-[1.5rem]">{o.title}</h3>
+                <h3 className="mt-4 text-[1.3rem] sm:text-[1.5rem]">{o.title}</h3>
                 <p className="mt-1.5 text-[0.85rem] font-semibold uppercase tracking-wider text-slate">
                   {o.meta}
                 </p>
@@ -310,11 +310,11 @@ export default function Home() {
       <Testimonials />
 
       {/* 8. Corporate band, deliberately a different visual world */}
-      <section className="bg-teal-800 py-20">
+      <section className="bg-teal-800 py-14 sm:py-20">
         <div className="wrap grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="eyebrow-gold">For organisations</p>
-            <h2 className="mt-3 text-[2rem] leading-tight text-white sm:text-[2.5rem]">
+            <h2 className="mt-3 text-[1.55rem] leading-tight text-white sm:text-[2.5rem]">
               Bringing your people along, not just your systems
             </h2>
             <p className="mt-5 text-[1.05rem] leading-relaxed text-teal-100">
@@ -353,12 +353,12 @@ export default function Home() {
       </section>
 
       {/* 9. Latest articles */}
-      <section className="py-20">
+      <section className="py-14 sm:py-20">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-xl">
               <p className="eyebrow">Reading</p>
-              <h2 className="mt-3 text-[2rem] leading-tight sm:text-[2.5rem]">Start here, free</h2>
+              <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">Start here, free</h2>
             </div>
             <Link href="/articles/" className="link-teal text-[0.95rem]">
               All articles <span aria-hidden="true">&rarr;</span>

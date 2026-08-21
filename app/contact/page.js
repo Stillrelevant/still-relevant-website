@@ -19,7 +19,7 @@ export default function Contact() {
         lede="Short messages are fine. Everything is read personally and you will usually get a reply within two working days."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <ContactForm />
 

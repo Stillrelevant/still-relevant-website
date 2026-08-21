@@ -99,7 +99,7 @@ export default function Guide() {
 
             <div className="lg:sticky lg:top-28">
               <div className="rounded-3xl bg-white p-7 shadow-xl">
-                <h2 className="text-[1.4rem]">Send me the guide</h2>
+                <h2 className="text-[1.25rem] sm:text-[1.4rem]">Send me the guide</h2>
                 <p className="mt-2 text-[0.93rem] leading-relaxed text-slate">
                   Straight to your inbox. Then one useful email a week, and nothing else.
                 </p>

@@ -11,7 +11,7 @@ export default function PageHero({ eyebrow, title, lede, trail }) {
         )}
         <div className="max-w-3xl">
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-          <h1 className="mt-3 text-[2.3rem] leading-[1.1] sm:text-[3rem]">{title}</h1>
+          <h1 className="mt-3 text-[1.8rem] leading-[1.15] sm:text-[3rem]">{title}</h1>
           {lede && <p className="mt-5 lede">{lede}</p>}
         </div>
       </div>

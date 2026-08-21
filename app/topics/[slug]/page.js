@@ -55,7 +55,7 @@ export default async function TopicPage({ params }) {
         lede={topic.intro}
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap">
           {articles.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -74,7 +74,7 @@ export default async function TopicPage({ params }) {
 
       <section className="border-y border-teal-100 bg-teal-50/50 py-14">
         <div className="wrap">
-          <h2 className="text-[1.6rem]">Other topics</h2>
+          <h2 className="text-[1.35rem] sm:text-[1.6rem]">Other topics</h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {others.map((t) => (
               <Link

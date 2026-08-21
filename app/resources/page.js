@@ -43,9 +43,9 @@ export default function Resources() {
         lede="Three worlds, free articles, the starter guide and the paid resources. Nothing here is hidden behind a form except the guide itself."
       />
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap">
-          <h2 className="text-[1.9rem] leading-tight">The three worlds</h2>
+          <h2 className="text-[1.5rem] leading-tight sm:text-[1.9rem]">The three worlds</h2>
           <p className="mt-3 max-w-2xl text-[1rem] leading-relaxed text-slate">
             Everything on this site sits in one of these. Start with whichever matters most to you
             right now.
@@ -56,7 +56,7 @@ export default function Resources() {
             ))}
           </div>
 
-          <h2 className="mt-14 text-[1.9rem] leading-tight">Practical help</h2>
+          <h2 className="mt-14 text-[1.5rem] leading-tight sm:text-[1.9rem]">Practical help</h2>
           <p className="mt-3 max-w-2xl text-[1rem] leading-relaxed text-slate">
             The how, rather than the what. Getting going, getting good answers, and where you fit as
             things change.
@@ -69,10 +69,10 @@ export default function Resources() {
         </div>
       </section>
 
-      <section className="border-y border-teal-100 bg-teal-50/50 py-16">
+      <section className="border-y border-teal-100 bg-teal-50/50 py-12 sm:py-16">
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="text-[1.9rem] leading-tight">Most recent</h2>
+            <h2 className="text-[1.5rem] leading-tight sm:text-[1.9rem]">Most recent</h2>
             <Link href="/articles/" className="link-teal text-[0.95rem]">
               All articles <span aria-hidden="true">&rarr;</span>
             </Link>
@@ -85,7 +85,7 @@ export default function Resources() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="wrap grid gap-6 md:grid-cols-3">
           <div className="card">
             <p className="eyebrow">Free</p>
