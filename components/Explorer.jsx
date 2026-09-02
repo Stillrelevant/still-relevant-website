@@ -79,9 +79,9 @@ const groups = [
         now: 'Ask for the strongest case against it, privately, before anyone else sees it',
       },
       {
-        task: 'The practical bits nobody explains',
-        before: 'Give up somewhere around the second official website',
-        now: 'Ask what is actually involved, at whatever level you need, until it makes sense',
+        task: 'Promoting the thing once it exists',
+        before: 'Pay someone for a flyer, or post nothing at all because you cannot face it',
+        now: 'Flyers, captions, a month of posts and a short video, made in an afternoon',
       },
       {
         task: 'Learning something properly this time',
