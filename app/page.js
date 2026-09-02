@@ -24,12 +24,45 @@ const thoughts = [
   'Is this really something I need?',
 ];
 
+/**
+ * Straight from the workshop feedback form. Six of the seven people who filled it in
+ * described AI as a search engine before the session, in almost identical words.
+ * Left column is what they said they thought. Right column is what they said afterwards.
+ * Do not invent rows here. Only add what somebody actually wrote.
+ */
+const shift = [
+  {
+    before: 'Somewhere to look things up, more or less like Google',
+    after: 'Something that takes a task you are turning over in your head and helps you simplify it',
+  },
+  {
+    before: 'A place to ask questions and get an answer back',
+    after: 'A way to make things: content, flyers, resources, plans, in minutes rather than evenings',
+  },
+  {
+    before: 'A research tool, and not much more',
+    after: 'Something you instruct properly, so what comes back is what you actually ordered',
+  },
+  {
+    before: 'A techy thing, for tech people',
+    after: 'Something for meal plans, week planning and the ordinary running of a life',
+  },
+];
+
 const offers = [
   {
     tag: 'Start here',
     title: 'Where Do I Fit In?',
     meta: 'Live session | 90 minutes | online',
     body: 'The one to come to first. No jargon, no assumed knowledge, and no laptop skills required. You leave knowing three specific things AI could do for your life, and having tried one of them.',
+    href: '/learn/',
+    cta: 'See dates and details',
+  },
+  {
+    tag: 'The one that changes it',
+    title: 'Asking Better Questions',
+    meta: 'Live session | 2 hours | online | £65',
+    body: 'The single thing workshop people name most often as what finally made it work. You get out of these tools roughly what you put in, and almost nobody is taught how to put anything in. Two hours on that alone.',
     href: '/learn/',
     cta: 'See dates and details',
   },
@@ -158,7 +191,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Possibilities before persuasion */}
+      {/* 3. The search engine misconception, the single most common one */}
+      <section className="border-y border-teal-100 bg-teal-800 py-14 sm:py-20">
+        <div className="wrap">
+          <div className="max-w-2xl">
+            <p className="eyebrow-gold">What people tell me afterwards</p>
+            <h2 className="mt-3 text-[1.55rem] leading-tight text-white sm:text-[2.5rem]">
+              Nearly everyone arrives thinking it is a search engine.
+            </h2>
+            <p className="mt-5 text-[1.02rem] leading-relaxed text-teal-100">
+              That is not a silly assumption. It is what the thing looks like: a box you type into.
+              But it is the reason most people try it once, get something flat back, and quietly
+              decide it is not for them. Here is what changes once somebody shows you.
+            </p>
+          </div>
+
+          <ul className="mt-10 grid gap-4 lg:grid-cols-2">
+            {shift.map((row) => (
+              <li
+                key={row.before}
+                className="grid gap-3 rounded-2xl bg-teal-900/50 p-6 sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-5"
+              >
+                <div>
+                  <p className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-teal-300">
+                    You think
+                  </p>
+                  <p className="mt-1.5 text-[0.95rem] leading-relaxed text-teal-100">
+                    {row.before}
+                  </p>
+                </div>
+                <span aria-hidden="true" className="hidden text-xl text-gold sm:block">
+                  &rarr;
+                </span>
+                <div>
+                  <p className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-gold">
+                    It is actually
+                  </p>
+                  <p className="mt-1.5 text-[0.95rem] leading-relaxed text-white">{row.after}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-8 max-w-2xl text-[1rem] leading-relaxed text-teal-100">
+            Every line on the right came from somebody who sat through one session. None of them
+            were technical. Most of them had tried it before and given up.
+          </p>
+
+          <Link href="/learn/" className="btn-onteal mt-8">
+            See the sessions
+          </Link>
+        </div>
+      </section>
+
+      {/* 4. Possibilities before persuasion */}
       <Explorer />
 
       {/* 4. The three worlds */}
@@ -285,9 +371,9 @@ export default function Home() {
         <div className="wrap">
           <div className="max-w-2xl">
             <p className="eyebrow">Where most people start</p>
-            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">Two good first steps</h2>
+            <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.5rem]">Three good first steps</h2>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {offers.map((o) => (
               <article key={o.title} className="card flex flex-col">
                 <span className="w-fit rounded-full bg-gold px-4 py-1.5 text-[0.72rem] font-bold uppercase tracking-[0.12em] text-teal-900">
