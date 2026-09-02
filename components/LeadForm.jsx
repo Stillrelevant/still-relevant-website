@@ -4,8 +4,17 @@ import { useState } from 'react';
 import { site } from '@/lib/site';
 
 /**
- * Safe mode: with site.formEndpoint set to null the form validates and shows real
- * success and error states, but sends nowhere. Set the endpoint in lib/site.js to go live.
+ * Posts to the MailerLite embedded-form endpoint in site.newsletterEndpoint, which
+ * adds the person to the Still Relevant Community group and sends them the double
+ * opt-in confirmation. No API key involved: that endpoint is public by design.
+ *
+ * The request goes out mode: 'no-cors' because MailerLite does not send CORS
+ * headers back to us. That means we cannot read the response, only that the
+ * request left the browser. It is a fair trade here, because the real
+ * confirmation the person gets is MailerLite's own opt-in email, not our tick.
+ *
+ * With newsletterEndpoint null the form falls back to safe mode: validates,
+ * shows real states, sends nowhere.
  */
 export default function LeadForm({
   source = 'newsletter',
@@ -30,7 +39,7 @@ export default function LeadForm({
     setStatus('sending');
     setError('');
 
-    if (!site.formEndpoint) {
+    if (!site.newsletterEndpoint) {
       // Safe mode. Nothing leaves the browser.
       await new Promise((r) => setTimeout(r, 500));
       setStatus('done');
@@ -38,19 +47,25 @@ export default function LeadForm({
       return;
     }
 
+    // MailerLite expects its own field names, not ours.
+    const payload = new FormData();
+    payload.append('fields[email]', data.get('email') || '');
+    if (data.get('name')) payload.append('fields[name]', data.get('name'));
+    payload.append('ml-submit', '1');
+    payload.append('anticsrf', 'true');
+
     try {
-      const res = await fetch(site.formEndpoint, {
+      await fetch(site.newsletterEndpoint, {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        mode: 'no-cors',
+        body: payload,
       });
-      if (!res.ok) throw new Error('Request failed');
       setStatus('done');
       form.reset();
     } catch {
       setStatus('error');
       setError(
-        `Something went wrong sending that. Please call ${site.phone} instead and I will pick it up.`
+        `Something went wrong sending that. Please WhatsApp me on ${site.phone} instead and I will send it over.`
       );
     }
   }
@@ -63,9 +78,11 @@ export default function LeadForm({
       >
         <p className="font-heading text-xl font-bold text-teal-700">Thank you, that is in.</p>
         <p className="mt-2 text-[0.95rem] leading-relaxed text-slate">
-          {site.formEndpoint
-            ? 'Check your inbox in the next few minutes. If nothing arrives, look in your promotions or junk folder.'
-            : 'Note for the site owner: the form is in safe mode, so nothing was actually sent. Add your endpoint in lib/site.js to go live.'}
+          {site.newsletterEndpoint
+            ? 'Check your inbox in the next few minutes and click the confirmation link. Nothing is sent until you do. If it has not arrived, look in your promotions or junk folder.'
+            : 'The signup form is not connected yet. WhatsApp me on ' +
+              site.phone +
+              ' and I will send the guide across myself.'}
         </p>
       </div>
     );
