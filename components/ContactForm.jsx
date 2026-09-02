@@ -52,11 +52,17 @@ export default function ContactForm() {
   if (status === 'done') {
     return (
       <div role="status" className="card">
-        <h2 className="text-[1.3rem] sm:text-[1.5rem]">Thank you, that has come through.</h2>
+        <h2 className="text-[1.3rem] sm:text-[1.5rem]">
+          {site.formEndpoint ? 'Thank you, that has come through.' : 'One more step, sorry.'}
+        </h2>
         <p className="mt-3 text-[0.98rem] leading-relaxed text-slate">
           {site.formEndpoint
-            ? 'You will get a reply within two working days. If it is urgent, email directly and put "urgent" in the subject line.'
-            : 'Note for the site owner: the form is in safe mode, so nothing was actually sent. Add your endpoint in lib/site.js to go live.'}
+            ? 'You will get a reply within two working days. If it is urgent, WhatsApp me on ' +
+              site.phone +
+              ' instead.'
+            : 'This form is not connected yet, so nothing was sent. Please WhatsApp or call me on ' +
+              site.phone +
+              ' and I will pick it up straight away. Sorry for the extra step.'}
         </p>
         <button type="button" onClick={() => setStatus('idle')} className="btn-ghost mt-6">
           Send another message
