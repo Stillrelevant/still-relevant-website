@@ -21,7 +21,7 @@ export default function Logo({ light = false, showTag = true }) {
             light ? 'text-white' : 'text-teal-700'
           }`}
         >
-          Still Relevant
+          Still Relevantt
         </span>
 
         {showTag && (

@@ -2,7 +2,7 @@
  * Branded panel used where a photograph will eventually go.
  * Reads as a deliberate brand graphic rather than an empty placeholder.
  */
-export default function BrandPanel({ label = 'Still Relevant', caption, className = '', tone = 'teal' }) {
+export default function BrandPanel({ label = 'Still Relevantt', caption, className = '', tone = 'teal' }) {
   const teal = tone === 'teal';
   return (
     <div

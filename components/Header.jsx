@@ -52,7 +52,7 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-40 border-b border-teal-100 bg-white">
         <div className="wrap flex h-[72px] items-center justify-between gap-6">
-          <Link href="/" aria-label="Still Relevant, home" className="shrink-0">
+          <Link href="/" aria-label="Still Relevantt, home" className="shrink-0">
             <Logo />
           </Link>
 
