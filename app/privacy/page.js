@@ -3,7 +3,7 @@ import { site } from '@/lib/site';
 
 export const metadata = {
   title: 'Privacy',
-  description: 'How Still Relevant handles your information. Short, plain English, no legal padding.',
+  description: 'How Still Relevantt handles your information. Short, plain English, no legal padding.',
   alternates: { canonical: `${site.url}/privacy/` },
   robots: { index: true, follow: true },
 };
