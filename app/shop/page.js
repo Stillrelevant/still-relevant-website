@@ -7,7 +7,7 @@ import { site } from '@/lib/site';
 export const metadata = {
   title: 'Shop',
   description:
-    'Guides, question libraries and short courses from Still Relevant. Practical, plain-English resources to work through in your own time.',
+    'Guides, question libraries and short courses from Still Relevantt. Practical, plain-English resources to work through in your own time.',
   alternates: { canonical: `${site.url}/shop/` },
 };
 
