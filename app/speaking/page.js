@@ -13,7 +13,7 @@ export const metadata = {
 
 const talks = [
   {
-    title: 'Still Relevant',
+    title: 'Still Relevantt',
     sub: 'Signature keynote | 45 minutes',
     body: 'Why the people most worried about being replaced are often the ones holding the thing that cannot be automated, and what to do with that. Ends with three things the audience can act on the same week.',
     audience: 'Mixed professional audiences, conferences, membership bodies',
