@@ -37,7 +37,7 @@ export default function About() {
         trail={[{ label: 'About', href: '/about/' }]}
         eyebrow="About"
         title="You don’t have to become a tech person."
-        lede="You just need to understand what’s useful to you. That sentence is more or less the whole reason Still Relevant exists."
+        lede="You just need to understand what’s useful to you. That sentence is more or less the whole reason Still Relevantt exists."
       />
 
       <section className="py-12 sm:py-16">
