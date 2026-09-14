@@ -10,9 +10,9 @@ import { getArticles } from '@/lib/articles';
 import { site, worlds } from '@/lib/site';
 
 export const metadata = {
-  title: 'Still Relevant | AI is changing the world. Here is where you fit in.',
+  title: 'Still Relevantt | AI is changing the world. Here is where you fit in.',
   description:
-    'Still Relevant helps adults 40+ find practical ways to use AI in everyday life, work and whatever comes next. Plain English, no jargon, nothing technical.',
+    'Still Relevantt helps adults 40+ find practical ways to use AI in everyday life, work and whatever comes next. Plain English, no jargon, nothing technical.',
   alternates: { canonical: '/' },
 };
 
@@ -68,9 +68,9 @@ const offers = [
   },
   {
     tag: 'Free',
-    title: 'The Where Do I Start guide',
-    meta: 'Short guide | straight to your inbox',
-    body: 'A plain-English guide to the handful of things worth trying first, in the order worth trying them. Written for people who are curious but not convinced, which is most people.',
+    title: '5 Things AI Can Do For You This Week',
+    meta: 'Two pages | straight to your inbox',
+    body: 'Five things you can try this week, each with the exact words to type. Written for people who are curious but not convinced, which is most people.',
     href: '/guide/',
     cta: 'Send it to me',
   },
@@ -123,7 +123,7 @@ export default function Home() {
             <p className="mt-6 max-w-xl lede">
               You don&rsquo;t have to become a tech person. You just need to see what&rsquo;s
               actually possible, and where it could genuinely make your life easier. That is what
-              Still Relevant is for.
+              Still Relevantt is for.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/start/" className="btn-primary">
@@ -184,7 +184,7 @@ export default function Home() {
             </ul>
             <p className="mt-6 text-[1rem] leading-relaxed text-slate">
               If any of those sound like you, you are in exactly the right place. That gap is the
-              whole reason Still Relevant exists, and nothing here will make you feel silly for
+              whole reason Still Relevantt exists, and nothing here will make you feel silly for
               being in it.
             </p>
           </div>
