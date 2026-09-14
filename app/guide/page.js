@@ -4,32 +4,32 @@ import FAQ from '@/components/FAQ';
 import { site } from '@/lib/site';
 
 export const metadata = {
-  title: 'The free starter guide',
+  title: '5 Things AI Can Do For You This Week',
   description:
-    'Where to start with AI, in plain English. A short free guide for adults 40+ who are curious but not sure where they fit in.',
+    'Five things you can try this week, with the exact words to type. A short free guide for adults 40+ who are curious but not sure where they fit in.',
   alternates: { canonical: `${site.url}/guide/` },
 };
 
 const inside = [
   {
-    t: 'Where it could fit into your life',
-    b: 'A simple way of spotting the two or three things AI could genuinely help you with, based on your life rather than somebody else’s.',
+    t: 'Write the email you have been putting off',
+    b: 'That message sitting in your drafts. Describe the situation in one sentence and it writes it for you. The exact wording to type is in the guide.',
   },
   {
-    t: 'How to ask better questions',
-    b: 'The single habit that turns a bland, useless answer into a properly helpful one. With examples you can copy straight into your first attempt.',
+    t: 'Plan your week around your actual life',
+    b: 'Your hours, your commitments, your Saturday. Not a template somebody else built for a life that looks nothing like yours.',
   },
   {
-    t: 'What to do when the answer is no good',
-    b: 'How to push back and keep the conversation going, instead of assuming you did it wrong and giving up.',
+    t: 'Make sense of a confusing letter',
+    b: 'Insurance, medical, tax. Paste it in and get it back in plain English, along with what you are actually being asked to do.',
   },
   {
-    t: 'The two rules that keep you safe',
-    b: 'What never gets typed in, and how to check a specific fact in under a minute. Short, clear and easy to remember.',
+    t: 'Prepare for a conversation that matters',
+    b: 'An interview, a review, a difficult chat with someone. Think it through beforehand so you walk in knowing your points.',
   },
   {
-    t: 'A realistic first fortnight',
-    b: 'Two things, four weeks, no course fees and no jargon. What to actually do, in order.',
+    t: 'Cut something long down to what matters',
+    b: 'Reports, articles, the minutes nobody reads. The handful of things you actually need, in seconds.',
   },
 ];
 
@@ -40,11 +40,11 @@ const faqs = [
   },
   {
     q: 'How long is it?',
-    a: 'Short enough to read in one sitting. It is written to be used rather than admired, so there is no padding.',
+    a: 'Two pages. It is written to be used rather than admired, so there is no padding.',
   },
   {
     q: 'Do I need any particular tool or account?',
-    a: 'No. A free account on any of the main ones is enough, and the guide works whichever you pick. It also explains how to set one up if you have not yet.',
+    a: 'A free ChatGPT account is all you need, and the guide tells you where to go. The same five things work on the other main tools too if you already use one.',
   },
   {
     q: 'Is this only for work?',
@@ -69,12 +69,12 @@ export default function Guide() {
             <div>
               <p className="eyebrow-gold">Free guide</p>
               <h1 className="mt-3 text-[2.2rem] leading-[1.1] text-white sm:text-[2.9rem]">
-                Where do I start with all this?
+                5 things AI can do for you this week
               </h1>
               <p className="mt-5 max-w-xl text-[1.12rem] leading-[1.65] text-teal-100">
                 There is an enormous amount being said about AI and most of it is written for
-                somebody else. This is short, plain and written for you: what it could actually do
-                for your life, and the handful of things worth trying first.
+                somebody else. This is two pages, written for you: five things worth trying this
+                week, each one with the exact words to type.
               </p>
 
               <ul className="mt-9 space-y-4">
