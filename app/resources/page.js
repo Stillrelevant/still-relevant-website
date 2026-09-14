@@ -8,7 +8,7 @@ import { site, worlds, supportingTopics } from '@/lib/site';
 export const metadata = {
   title: 'Resources',
   description:
-    'Everything Still Relevant offers in one place. Three worlds, free articles, the starter guide and the paid resources.',
+    'Everything Still Relevantt offers in one place. Three worlds, free articles, the free guide and the paid resources.',
   alternates: { canonical: `${site.url}/resources/` },
 };
 
@@ -40,7 +40,7 @@ export default function Resources() {
         trail={[{ label: 'Resources', href: '/resources/' }]}
         eyebrow="Resources"
         title="Everything in one place."
-        lede="Three worlds, free articles, the starter guide and the paid resources. Nothing here is hidden behind a form except the guide itself."
+        lede="Three worlds, free articles, the free guide and the paid resources. Nothing here is hidden behind a form except the guide itself."
       />
 
       <section className="py-12 sm:py-16">
@@ -99,9 +99,9 @@ export default function Resources() {
           </div>
           <div className="card">
             <p className="eyebrow">Free</p>
-            <h2 className="mt-3 text-[1.35rem]">The starter guide</h2>
+            <h2 className="mt-3 text-[1.35rem]">5 Things AI Can Do For You This Week</h2>
             <p className="mt-3 text-[0.95rem] leading-relaxed text-slate">
-              Where to begin, what to try first, and the two rules that keep you safe.
+              Five things you can try this week, each with the exact words to type.
             </p>
             <Link href="/guide/" className="btn-primary mt-6 w-full sm:w-fit">
               Get the guide
