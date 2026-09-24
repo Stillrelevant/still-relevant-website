@@ -44,6 +44,7 @@ const organisation = {
   name: site.name,
   url: site.url,
   telephone: site.phone,
+  email: site.email,
   description: site.description,
   founder: { '@id': `${site.url}/#founder` },
 };
