@@ -25,12 +25,15 @@ export default function Contact() {
 
           <aside className="space-y-6">
             <div className="rounded-3xl bg-teal-50/70 p-8">
-              <h2 className="text-[1.3rem]">Prefer to talk?</h2>
+              <h2 className="text-[1.3rem]">Prefer not to use the form?</h2>
               <p className="mt-3 text-[0.95rem] leading-relaxed text-slate">
-                Call or send a message. If it goes to voicemail, leave your name and what it is
-                about and you will get a call back.
+                Email or call, whichever suits you. If a call goes to voicemail, leave your name
+                and what it is about and you will get a call back.
               </p>
-              <a href={site.phoneHref} className="link-teal mt-4 inline-block text-[1.1rem]">
+              <a href={site.emailHref} className="link-teal mt-4 block text-[1.1rem] break-words">
+                {site.email}
+              </a>
+              <a href={site.phoneHref} className="link-teal mt-2 block text-[1.1rem]">
                 {site.phone}
               </a>
             </div>
