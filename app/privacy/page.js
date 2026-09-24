@@ -54,7 +54,8 @@ export default function Privacy() {
           <h2>Your rights</h2>
           <p>
             Under UK data protection law you can ask for a copy of what is held about you, ask for
-            it to be corrected, or ask for it to be deleted. Call{' '}
+            it to be corrected, or ask for it to be deleted. Email{' '}
+            <a href={site.emailHref}>{site.email}</a> or call{' '}
             <a href={site.phoneHref}>{site.phone}</a> and it will be actioned. There is no form to
             fill in.
           </p>
@@ -77,8 +78,8 @@ export default function Privacy() {
 
           <h2>Contact</h2>
           <p>
-            Questions about any of this go to <a href={site.phoneHref}>{site.phone}</a>, or use the
-            contact form.
+            Questions about any of this go to <a href={site.emailHref}>{site.email}</a> or{' '}
+            <a href={site.phoneHref}>{site.phone}</a>, or use the contact form.
           </p>
         </div>
       </section>
