@@ -9,7 +9,7 @@ import { site } from '@/lib/site';
 export const metadata = {
   title: 'Learn',
   description:
-    'Live, plain-English AI sessions for adults 40+. No jargon, no assumed knowledge, and nothing that expects you to become technical.',
+    'Live, plain-English AI sessions for adults 40+, including a dedicated session for business owners. No jargon, no assumed knowledge, and nothing that expects you to become technical.',
   alternates: { canonical: `${site.url}/learn/` },
 };
 
@@ -70,6 +70,19 @@ const courses = [
     ],
   },
   {
+    name: 'AI for Business Owners',
+    level: 'Business owners and the self-employed',
+    length: '4 hours',
+    price: '£150',
+    summary:
+      'For people already running something. A shop, a practice, a consultancy, a trade, a side hustle that has outgrown the evenings. This is about the jobs that eat your week and should not need you doing them by hand.',
+    points: [
+      'Marketing, posts and customer emails drafted in minutes rather than Sunday evening',
+      'The admin, quotes and chasing that quietly takes a day a week',
+      'Thinking a decision through properly when there is nobody to talk it over with',
+    ],
+  },
+  {
     name: 'What’s Next',
     level: 'Fifties, sixties, seventies and beyond',
     length: '4 hours',
@@ -117,6 +130,22 @@ const privateTiers = [
     ],
     cta: 'Book now',
     featured: true,
+  },
+  {
+    id: 'business-one-to-one',
+    tag: 'For business owners',
+    name: 'Business one to one',
+    price: '£250',
+    length: '2 hours 30 minutes · online',
+    line: 'The same private teaching, built entirely around the business you are already running.',
+    points: [
+      'We start from your actual week, not a generic business example',
+      'Marketing, content, customer communication, admin and quotes',
+      'How to think a business decision through with it, without handing over your judgement',
+      'What is safe to put in when it is customer information, and what never goes in',
+      'Recorded, and the replay is yours for life',
+    ],
+    cta: 'Book now',
   },
   {
     id: 'done-with-you',
@@ -171,6 +200,10 @@ const faqs = [
   {
     q: 'Do I get anything to keep?',
     a: 'Yes. You leave with the questions you built during the session, a written summary in plain English, and whatever you came in wanting to get done.',
+  },
+  {
+    q: 'I run a business. Which one should I come to?',
+    a: 'AI for Business Owners is the one built for you, and it assumes you are already trading rather than thinking about starting. If you have never used any of this before, Where Do I Fit In first will make the business day land better, though plenty of owners come straight to the business session and do fine. If you would rather not wait for a group to fill, the business one to one covers the same ground privately and runs every week.',
   },
   {
     q: 'Can these be run privately for a group?',
@@ -264,13 +297,14 @@ export default function Learn() {
           <div className="max-w-2xl">
             <p className="eyebrow">Private sessions with Temi Olajide</p>
             <h2 className="mt-3 text-[1.55rem] leading-tight sm:text-[2.2rem]">
-              Two and a half hours. Just you and me. And nobody to keep up with.
+              Just you and me. No room to keep up with.
             </h2>
             <p className="mt-4 lede">
               A proper deep dive into how to actually use this, taught at your pace, built around
-              what you want to do with it. Whether you have never opened one of these tools or you
-              have been fiddling with it for months, you leave knowing how to do it yourself. Every
-              online session is recorded, and the replay is yours for life.
+              what you want to do with it. There is a general session and one built specifically for
+              business owners. Whether you have never opened one of these tools or you have been
+              fiddling with it for months, you leave knowing how to do it yourself. Every online
+              session is recorded, and the replay is yours for life.
             </p>
             <p className="mt-5 text-[1.02rem] text-ink">
               <span className="font-heading text-[1.6rem] font-bold text-teal-700">From £199</span>{' '}
@@ -288,7 +322,7 @@ export default function Learn() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {privateTiers.map((t) => (
               <article
                 key={t.id}
@@ -326,7 +360,7 @@ export default function Learn() {
                 </ul>
 
                 <a
-                  href={t.id === 'one-to-one' ? book : chat}
+                  href={t.id === 'one-to-one' || t.id === 'business-one-to-one' ? book : chat}
                   className={`mt-7 w-full ${t.featured ? 'btn-primary' : 'btn-ghost'}`}
                 >
                   {t.cta}
