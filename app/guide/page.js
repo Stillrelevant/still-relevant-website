@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 export const metadata = {
   title: '5 Things AI Can Do For You This Week',
   description:
-    'Five things you can try this week, with the exact words to type. A short free guide for adults 40+ who are curious but not sure where they fit in.',
+    'Five things you can try this week, with the exact words to type. A short free guide for adults 40+, whether that is for your own life, your work or a business you run.',
   alternates: { canonical: `${site.url}/guide/` },
 };
 
