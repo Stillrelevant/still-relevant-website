@@ -40,7 +40,7 @@ const programmes = [
   {
     title: 'Members and communities',
     meta: 'Flexible | 60 to 120 minutes',
-    body: 'For professional bodies, charities, churches, U3A groups and community organisations. Warm, jargon-free sessions for audiences who did not come from a technical background and do not want to.',
+    body: 'For professional bodies, business networks, chambers of commerce, charities, churches, U3A groups and community organisations. Warm, jargon-free sessions for audiences who did not come from a technical background and do not want to.',
   },
   {
     title: 'Sensible adoption review',
