@@ -59,6 +59,7 @@ const person = {
   url: `${site.url}/about/`,
   knowsAbout: [
     'Artificial intelligence for non-technical professionals',
+    'AI for small business owners and the self-employed',
     'Digital confidence',
     'Business strategy',
     'AI governance and responsible adoption',
