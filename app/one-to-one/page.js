@@ -10,7 +10,7 @@ import { site } from '@/lib/site';
 export const metadata = {
   title: 'Work with me one to one',
   description:
-    'Private AI sessions with Temi Olajide. Two and a half hours, taught at your pace, on whatever you want to be able to do. One to one from £199, done with you £449, done for you quoted per project.',
+    'Private AI sessions with Temi Olajide, taught at your pace, on whatever you want to be able to do. One to one £199, a dedicated business owners session at £250, done with you £449, done for you quoted per project.',
   alternates: { canonical: `${site.url}/one-to-one/` },
 };
 
@@ -20,7 +20,7 @@ const chat = site.whatsappUrl || '/contact/';
 const signals = [
   'You have never really used AI and you would rather learn it properly, one to one, than sit in a room hoping to keep up.',
   'You have sat through a class, followed along fine, then opened your laptop on Monday and not known where to start with your own thing.',
-  'You are running something already, a business, a practice, a side hustle, and you can feel how much time goes on work that should not need you.',
+  'You are a business owner already, running a shop, a practice, a trade, a consultancy or a side hustle, and you can feel how much of your week goes on work that should not need you doing it by hand.',
   'You want to make videos and content without it eating your whole week.',
   'You have an idea you have been carrying for months, maybe years, and the not knowing how is what keeps it sitting there.',
   'You do not want to wait two months for the next group session.',
@@ -45,6 +45,24 @@ const tiers = [
     cta: 'Book now',
     href: book,
     featured: true,
+  },
+  {
+    id: 'business-one-to-one',
+    tag: 'For business owners',
+    name: 'Business one to one',
+    price: '£250',
+    length: '2 hours 30 minutes · online',
+    line: 'The same private teaching, built entirely around the business you are already running.',
+    points: [
+      'We start from your actual week, not a generic business example',
+      'Marketing, content, customer communication, admin, quotes and chasing',
+      'How to think a business decision through with it, without handing your judgement over',
+      'What is safe to put in when it is customer information, and what never goes in',
+      'Recorded, and the replay is yours for life',
+      'Add £100 to meet in person, anywhere in the UK',
+    ],
+    cta: 'Book now',
+    href: book,
   },
   {
     id: 'done-with-you',
@@ -245,8 +263,10 @@ export default function OneToOne() {
             <p className="mt-5 text-[1rem] leading-relaxed text-slate">
               Some people book this because they have never touched it and would rather learn one to
               one than in a room. Others book it because they already know what they want and need
-              someone to show them how. Both are welcome, and both get the same thing: my full
-              attention for two and a half hours.
+              someone to show them how. A good number are business owners who want this pointed
+              straight at the business rather than at life in general, which is what the business
+              session is for. All of you are welcome, and all of you get the same thing: my full
+              attention, and no room to keep up with.
             </p>
           </div>
 
@@ -296,7 +316,7 @@ export default function OneToOne() {
             </h2>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {tiers.map((t) => (
               <article
                 key={t.id}
